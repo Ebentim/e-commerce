@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Product Listing</title>
+</head>
+
+<body>
+  <header>
+    <h1>Product Listing</h1>
+    <!-- Navigation and other elements -->
+  </header>
+  <main>
+    <h2>All Products</h2>
+    <ul>
+      <!-- Loop through products and display each product -->
+      <li>
+        <h3>Product 1</h3>
+        <p>Price: $19.99</p>
+        <a href="/product-details/1">View Details</a>
+      </li>
+      <li>
+        <h3>Product 2</h3>
+        <p>Price: $24.99</p>
+        <a href="/product-details/2">View Details</a>
+      </li>
+      <!-- ... more product listings -->
+    </ul>
+  </main>
+  <footer>
+    <p>&copy; 2023 My E-commerce Store. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // JavaScript code for the product listing page
+
+      // Function to fetch and display all products
+      function displayAllProducts() {
+        // Fetch all products from the server (API call or data retrieval)
+        const allProducts = [
+          { id: 1, name: "Product A", price: 19.99 },
+          { id: 2, name: "Product B", price: 24.99 },
+          { id: 3, name: "Product C", price: 14.99 }
+        ];
+
+        // Display all products on the product listing page (update HTML elements)
+        const productList = document.querySelector("#product-list");
+
+        allProducts.forEach(product => {
+          const productElement = document.createElement("li");
+          productElement.innerHTML = `<h3>${product.name}</h3>
+                                <p>Price: $${product.price}</p>
+                                <a href="/product-details/${product.id}">View Details</a>`;
+          productList.appendChild(productElement);
+        });
+      }
+
+      // Call the function to display all products when the page loads
+      window.addEventListener("load", displayAllProducts);
+
+  </script>
+</body>
+
+</html>

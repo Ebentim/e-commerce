@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <style>
+    .line::before{
+      content: "Additional Information";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 0 10px;
+      background-color: #dee2e6;
+      font-weight: 700;
+    }
+    #preview_main_image img, #preview_second_image img, #preview_third_image img, #preview_forth_image img, #preview_video video{
+      height: auto;
+      width: auto;
+      max-height: 400px;
+      max-width: 300px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand bg-body-tertiary">
+    <div class="container-fluid">
+      <a href="#" class="navbar-brand">
+        <img src="/images/cart-svgrepo-com.svg" alt="logo"
+          style="width: auto; height: auto; max-width: 40px; max-height: 40px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" ,
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collpase navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a href="#" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">My Store</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <img src="/images/cart-svgrepo-com.svg" alt="cart" style="height:20px;width:20px"></a>
+          </li>
+        </ul>
+      </div>
+  </nav>
+  <marquee behavior="scroll" direction="right" class="bg-orange p-2 signin text-uppercase">Coming Soon!!! Featured product</marquee>
+  <main class="container-fluid">
+    <form action="#" method="post">
+      <div class="row">
+
+        <div class="col">
+          <label for="product_main_image"></label>
+          <input type="file" name="product_main_image" id="product_main_image" required>
+          <div id="preview_main_image"></div>
+        </div>
+
+        <div class="col">
+            <label for="product_second-image"></label>
+            <input type="file" name="product_second-image" id="product_second-image" required>
+            <div id="preview_second_image"></div>
+        </div>
+
+        <div class="col">
+            <label for="product_third_image"></label>
+            <input type="file" name="product_third_image" id="product_third_image" required>
+            <div id="preview_third_image"></div>
+        </div>
+        <div class="col">
+            <label for="product_forth_image"></label>
+            <input type="file" name="product_forth_image" id="product_forth_image">
+            <div id="preview_forth_image"></div>
+        </div>
+      </div>
+      <div class="row">
+        <label for="product_video"></label>
+        <input type="file" name="product_video" id="product_video" required>
+        <div id="preview_video">
+          <video autoplay></video>
+        </div>
+      </div>
+      <h6 class="text-center signin mt-5 num-fill border text-white p-2 text-uppercase" style="background-color: #fd7e14;">Would you like to include a last price?</h6>
+        <fieldset id="last" class="m-auto d-flex justify-content-evenly mt-2">
+          <label for="yes_discount">
+            <input type="radio" name="last" id="yes_discount" checked> Yes
+          </label>
+          <label for="no_discount">
+            <input type="radio" name="last" id="no_discount"> No
+          </label>
+        </fieldset>
+      <div class="row">
+        <div class="col-12 col-md-3 m-md-auto">
+          <label for="product_name"></label>
+          <input type="text" name="product_name" id="product_name" placeholder="Product name" required min="3">
+        </div>
+
+        <div class="col-12 col-md-3 m-md-auto">
+          <label for="product_price">&#8358</label>
+          <input type="number" name="product_price" id="product_price" placeholder="Initial Price" required>
+        </div>
+
+        <div class="col-12 col-md-3 m-md-auto">
+          <label for="last_price">&#8358</label>
+          <input type="number" name="last_price" id="last_price" placeholder="Last Price" required>
+        </div>
+
+        <div class="col col-md-3">
+          <label for="product_description"></label>
+          <textarea name="product_description" id="product_description" cols="50" rows="100" style="height: auto; max-height: 200px; width: auto; max-width: 300px;" required class="mt-4 overflow-hidden"></textarea>
+        </div>
+      </div>
+
+      <div class="line mt-4 mb-4 bg-gradient position-relative"style="height: 2px; width: 100%; background-color: #fd7e14"></div>
+        <fieldset id="warranty" required>
+          <h5 class="text-center mt-1">Does this product has warranty</h5>
+          <div class="row">
+          <label for="yes_warranty" class="col">
+            <input type="radio" name="warranty" id="yes_warranty" value="yes" checked> Yes
+          </label>
+          <label for="no_warranty" class="col">
+            <input type="radio" name="warranty" id="no_warranty" value="no"> No
+          </label>
+          </div>
+          <div class="row">
+            <p class="col">If yes, How many month warranty</p>
+          <label for="warranty_duration" class="col">
+            <input type="range" id="warranty_duration" min="1" maxlength="12" value="0" max="12" oninput="this.nextElementSibling.value = this.value">
+            <output id="warranty_duration_output">0</output>
+          </label>
+          </div>
+        </fieldset>
+        <fieldset id="stock_quantity">
+          <h5 class="text-center">Quantity of stocks Available</h5>
+          <div class="row m-auto">
+              <input type="number" name="stock_quantity" id="stock_quantity" min="0" max="100" oninput="this.nextElementSibling.value  = this.value" value="5" class="col-2 btn num-fill border m-auto" required>
+              <output class="col-1 text-center m-auto" id="stock_quantity_output">5</output>
+            </div>
+          </div>
+        </fieldset>
+          <fieldset id="discount_information">
+            <h5 class= "text-center signin mt-5 border text-white p-2 text-uppercase" id="product_discount_heading" style="background-color: #fd7e14;"></h5>
+            <div class="d-flex justify-content-evenly">
+              <label for="yes_discount">
+                <!-- <input type="radio" name="discount_information" id="yes_discount"> Yes
+              </label>
+              <label for="no_discount">
+                <input type="radio" name="discount_information" id="no_discount"> No
+              </label>
+              <label for="percent_discount">
+                <input type="number" name="discount_information" id="percent_discount" style="display: none;" min="5" max="75" oninput="this.nextElementSibling.value = this.value" placeholder="% Discount?">
+              </label> -->
+              <p id="selling_price">Sales Price: &#8358 <span id="dprice"></span></p>
+            </div>
+          </fieldset>
+        <div class="row mb-3">
+          <button type="submit" id="submit" class="btn num-fill border m-auto col-3"> Upload</button>
+        </div>
+    </form>
+  </main>
+  <footer class="bg-tertiary mt-1 text-center">
+    <h4>Etmartz &Copy 2023. All rights reserved </h4>
+  </footer>
+  <script src="/sellers/dashboard.js"></script>
+  <script src="/js/bootstrap.js"></script>
+</body>
+</html>

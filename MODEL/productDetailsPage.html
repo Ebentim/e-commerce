@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Product Details</title>
+</head>
+
+<body>
+  <header>
+    <h1>Product Details</h1>
+    <!-- Navigation and other elements -->
+  </header>
+  <main>
+    <h2>Product 1</h2>
+    <p>Price: $19.99</p>
+    <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <!-- Add to cart button and other options -->
+  </main>
+  <footer>
+    <p>&copy; 2023 My E-commerce Store. All rights reserved.</p>
+  </footer>
+  <script>
+    // JavaScript code for the product details page
+
+      // Function to fetch and display product details
+      function displayProductDetails(productId) {
+        // Fetch product details from the server (API call or data retrieval)
+        const productDetails = {
+          id: productId,
+          name: "Product A",
+          price: 19.99,
+          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        };
+
+        // Display the product details on the product details page (update HTML elements)
+        const productDetailsSection = document.querySelector("#product-details");
+
+        productDetailsSection.innerHTML = `<h2>${productDetails.name}</h2>
+                                      <p>Price: $${productDetails.price}</p>
+                                      <p>${productDetails.description}</p>`;
+      }
+
+      // Get the product ID from the URL or any other means
+      const productId = 1;
+
+      // Call the function to display product details with the provided product ID
+      displayProductDetails(productId);
+
+  </script>
+</body>
+
+</html>

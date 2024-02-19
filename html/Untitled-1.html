@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scheduling Web App</title>
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <div id="app">
+    <header>
+      <h1>Scheduling Web App</h1>
+      <p>A simple and easy-to-use scheduling app</p>
+    </header>
+    <main>
+      <section>
+        <h2>Features</h2>
+        <ul>
+          <li>Simple and easy to use</li>
+          <li>Schedule appointments and events</li>
+          <li>Make online payments</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Sign up</h2>
+        <p>Sign up for a free account to get started</p>
+        <button>Sign Up</button>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+<script>
+  import React, { useState } from "react";
+
+    const App = () => {
+      const [name, setName] = useState("");
+
+      const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(name);
+      };
+
+      return (
+        <div>
+          <h1>Scheduling Web App</h1>
+          <p>A simple and easy-to-use scheduling app</p>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              placeholder="Enter your name"
+              value={name}
+              onChange={setName}
+            />
+            <button type="submit">Sign Up</button>
+          </form>
+        </div>
+      );
+    };
+
+    export default App;
+</script>
+</html>

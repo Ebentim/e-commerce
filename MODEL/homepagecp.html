@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>My E-commerce Store</title>
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to My E-commerce Store</h1>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/products">Products</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Featured Products</h2>
+      <!-- Display featured products here -->
+    </section>
+    <section>
+      <h2>New Arrivals</h2>
+      <!-- Display new arrivals here -->
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2023 My E-commerce Store. All rights reserved.</p>
+  </footer>
+
+<script>
+  // JavaScript code for the home page
+
+    // Function to fetch and display featured products
+    function displayFeaturedProducts() {
+      // Fetch featured products from the server (API call or data retrieval)
+      const featuredProducts = [
+        { id: 1, name: "Product A", price: 19.99 },
+        { id: 2, name: "Product B", price: 24.99 },
+        { id: 3, name: "Product C", price: 14.99 }
+      ];
+
+      // Display the featured products on the home page (update HTML elements)
+      const featuredProductsSection = document.querySelector("#featured-products");
+
+      featuredProducts.forEach(product => {
+        const productElement = document.createElement("div");
+        productElement.innerHTML = `<h3>${product.name}</h3>
+                                <p>Price: $${product.price}</p>`;
+        featuredProductsSection.appendChild(productElement);
+      });
+    }
+
+    // Call the function to display featured products when the page loads
+    window.addEventListener("load", displayFeaturedProducts);
+
+</script>
+</body>
+
+</html>

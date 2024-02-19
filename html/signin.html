@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="title" content="Landing Page">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+<style>
+  .line::before {
+    content: "Or";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 10px;
+    background-color: #f8f9fa;
+    font-weight: 700;
+  }
+  input{
+    outline: none;
+  }
+</style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand bg-body-tertiary">
+    <div class="container-fluid">
+      <a href="#" class="navbar-brand">
+        <img src="images/cart-svgrepo-com.svg" alt="logo"
+          style="width: auto; height: auto; max-width: 40px; max-height: 40px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" ,
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collpase navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav m-auto me-auto">
+          <li class="nav-item">
+            <a href="#" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Store</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Sign up</a>
+          </li>
+        </ul>
+      </div>
+  </nav>
+<main class="position-relative">
+  <div class="m-auto">
+    <form action="#" method="post" style="height:auto; max-width: 300px; width:auto; background-color: #f8f9fa; border: 1px solid #fd7e14;" class=" m-auto rounded-3 pb-3">
+      <div class="signin  m-auto mb-4" style="width:80%">
+          <label for="username"></label>
+          <input type="text" name="username" id="username" placeholder="Username" min="3" max="25" class="signin form-control rounded-2 mt-3" required style="border-bottom:2px solid #fd7e14;">
+      </div>
+      <div class="signin  m-auto rounded-2 mb-4" style="width:80%">
+          <label for="password"></label>
+          <input type="password" name="password" id="password" placeholder="Password" min="8" class=" rounded-2 form-control signin" required style="border-bottom:2px solid #fd7e14;">
+      </div>
+      <div class="m-auto" style="width:80%">
+        <button class="signin border btn num-fill" style="width: 100%;">Sign in</button>
+      </div>
+      <div class="line position-relative mt-5 mb-4" style="height: 1px; width:100%; background-color: #fd7e14;">
+      </div>
+
+          <div class="signin  m-auto rounded-2 mb-4" style="width:80%">
+            <div class="m-auto d-flex border-primary justify-content-center p-2 rounded-3" style="border: 1px solid #0d6efd;">
+              <img src="images/facebookiccon.svg" alt="facebook icon" style="height:30px; width:30px">
+              <p class="signin text-primary m-auto">facebook</p>
+            </div>
+          </div>
+            <div class="signin  m-auto rounded-2 mb-4" style="width:80%">
+              <div class="m-auto d-flex border-dark justify-content-center p-2 rounded-3" style="border: 1px solid">
+              <img src="images/google-icon.png" alt="twitter icon" height="30px" width="30px">
+              <p class="text-dark m-auto">Google</p>
+            </div>
+          </div>
+    </form>
+  </div>
+</main>
+  <script src="js/bootstrap.js"></script>
+</body>
+</html>

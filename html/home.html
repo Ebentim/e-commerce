@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="title" content="Landing Page">
+  <title>Homepage</title>
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <style>
+    .categories{
+      background: #000;
+      color: white;
+      max-height: 100px;
+      max-width: 100px;
+      height: auto;
+      width: auto;
+    }
+    .imgDiv{
+      height: auto;
+      width: auto;
+      max-width: 80vw;
+      max-height: 80vh;
+    }
+    .imgDiv img{
+      height: auto;
+      width: auto;
+      max-height: 90%;
+      max-width: 40%;
+      margin-right: 40px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand bg-body-tertiary">
+    <div class="container-fluid">
+      <a href="#" class="navbar-brand">
+        <img src="/images/cart-svgrepo-com.svg" alt="logo"
+          style="width: auto; height: auto; max-width: 40px; max-height: 40px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" ,
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collpase navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a href="#" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Store</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Get Started</a>
+            <ul class="dropdown-menu">
+              <li><a href="#" class="dropdown-item" aria-current="page">Sign up</a>
+              </li>
+              <li><a href="#" class="dropdown-item">Sign in</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+  </nav>
+  <main>
+    <div class="container-fluid">
+      <div class="row" style="height: auto; max-height: 40px;">
+        <span class="col-2"></span>
+        <!-- <img src="/images/search_black_24dp.png" alt="search icon" class="col-2" style="height: auto; max-height: 40px; width: auto; max-width: 40px"> -->
+        <input type="search" name="search_button" id="search" class="col-6 ml-3 border-start border-end border-top signin" style="outline: none; border-bottom: 3px solid #212529;" placeholder="Search">
+        <button class="col-3 btn text-white signin" style="background-color: #212529;">Search</button>
+      </div>
+    </div>
+    <!-- <div class="container-fluid">
+      <div class="row row-col-4 row-gap">
+        <div class="categories col">
+          <p>Phones & Tablets</p>
+        </div>
+        <div class="categories col">
+          <p>Men Sneakers</p>
+        </div>
+        <div class="categories col">
+          <p>Watches</p>
+        </div>
+        <div class="categories col">
+          <p>Mobile Accessory</p>
+        </div>
+        <div class="categories col">
+          <p>Television</p>
+        </div>
+        <div class="categories col">
+          <p>Refrigerator</p>
+        </div>
+        <div class="categories col">
+          <p>Official Stores</p>
+        </div>
+      </div>
+    </div> -->
+    <div class="container-fluid mt-3 shop-div">
+      <div class="row m-auto row-gap-2">
+        <div class="card col-12 col-sm-4 col-md-3 pt-3">
+          <img src="/images/shopping-bag-svgrepo-com.svg" alt="" class="card-img">
+            <hr>
+            <h6 class="card-title">Shopping bag: Shop ex-50 bags</6> <br>
+            <p class="card-subtitle mt-2 border-0">&#8358 3000</p> <br>
+            <div class="w-100">
+              <button class="details border-0 p-2 bg-orange">Product Details</button>
+              <input disabled class="plus border-0 p-2 bg-dark text-white text-center" style="width:20%" value="&plus;">
+            </div>
+        </div>
+        <div class="card col-12 col-sm-4 col-md-3 pt-3">
+          <img src="/images/shopping-bag-svgrepo-com.svg" alt="" class="card-img">
+            <hr>
+            <h6 class="card-title">Shopping bag: Shop ex-50 bags</6> <br>
+            <p class="card-subtitle mt-2 border-0">&#8358 3000</p> <br>
+            <div class="w-100">
+              <button class="details border-0 p-2 bg-orange">Product Details</button>
+              <input disabled class="plus border-0 p-2 bg-dark text-white text-center" style="width:20%" value="&plus;">
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid" id="myProductPreview"></div>
+  </main>
+
+  <script src="/details.js"></script>
+</body>
+</html>

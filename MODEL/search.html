@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Search Results</title>
+  <script src="search.js"></script>
+</head>
+
+<body>
+  <h1>Search Results</h1>
+  <div id="results"></div>
+
+  <script>
+    // Simulated search results data
+      const searchResults = [
+        { id: 1, name: "Product A", price: 10.99 },
+        { id: 2, name: "Product B", price: 19.99 },
+        { id: 3, name: "Product C", price: 14.99 }
+      ];
+
+      // Function to display search results
+      function displayResults(results) {
+        const resultsContainer = document.getElementById("results");
+
+        if (results.length === 0) {
+          resultsContainer.innerHTML = "No results found.";
+          return;
+        }
+
+        // Loop through search results and create HTML elements
+        let html = "";
+        results.forEach(result => {
+          html += `<div class="result">
+                    <h3>${result.name}</h3>
+                    <p>Price: $${result.price}</p>
+                    <a href="/product-details?id=${result.id}">View Details</a>
+                </div>`;
+        });
+
+        // Insert the generated HTML into the results container
+        resultsContainer.innerHTML = html;
+      }
+
+      // Simulated search functionality
+      const searchQuery = "product"; // Example search query
+      const filteredResults = searchResults.filter(result =>
+        result.name.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+
+      displayResults(filteredResults);
+
+  </script>
+</body>
+
+</html>

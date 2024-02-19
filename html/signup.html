@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="title" content="Landing Page">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <style>
+ .line::before {
+    content: "Or";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 10px;
+    background-color: #dee2e6;
+    font-weight: 700;
+  }
+  input{
+    outline: none;
+  }
+  input[type="radio"]{
+    background: #000;
+  }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand bg-body-tertiary">
+    <div class="container-fluid">
+      <a href="#" class="navbar-brand">
+        <img src="images/cart-svgrepo-com.svg" alt="logo" style = "width: auto; height: auto; max-width: 40px; max-height: 40px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent", aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collpase navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a href="#" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Store</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Get Started</a>
+            <ul class="dropdown-menu">
+              <li><a href="#" class="dropdown-item" aria-current="page">Sign up</a>
+              </li>
+              <li><a href="#" class="dropdown-item">Sign in</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+  </nav>
+  <main>
+    <div class="container-fluid">
+    <form action="#" method="post" class="border-o m-auto rounded-3 pb-3" style="height:auto; max-width: 300px; width:auto; background-color: #fd7e14;">
+      <fieldset id="mart" class="row text-white mb-3">
+        <div class="d-flex justify-content-evenly signin m-auto rounded-2 mb-4" style="width:80%">
+        <label>
+        <input type="radio" value="seller" name="mart" checked> Sell
+        </label>
+        <label>
+        <input type="radio" value="buyer" name="mart"> Buy
+        </label>
+        </div>
+      </fieldset>
+      <div class="signin m-auto rounded-2 mb-4" style="width:80%">
+      <fieldset id="details">
+        <input type="text" name="fullname" id="fullname" placeholder="Fullname" required min="3" max="25" class="p-2 rounded-2 border-0 mb-3 form-control">
+        <input type="email" name="details" id="email" placeholder="Email" required class="form-control p-2 rounded-2 border">
+        <input type="password" name="details" id="password" placeholder="Password" min="8" max="16" required class="form-control p-2 rounded-2 mt-3 border">
+        <input type="password" name="details" id="confirm_password" placeholder="Confirm password" required class=" form-control p-2 rounded-2 mt-3 border">
+      </fieldset>
+      </div>
+      <div class="signin m-auto rounded-2 mb-4" style="width:80%">
+      <input type="submit" value="Sign up" class="btn btn-outline-dark">
+      </div>
+      <div class="line position-relative mt-5 mb-4" style="height:1px; width:100%; background-color: #dee2e6;"></div>
+      <div class="signin m-auto rounded-2 mb-4" style="width:80%">
+        <div class=" m-auto d-flex mt-3 justify-content-center p-2 rounded-3 border-0 bg-white">
+            <img src="/images/facebookiccon.svg" alt="Facebook icon" style="height:30px; width:30px;">
+            <p class="text-primary m-auto signin">facebook</p>
+        </div>
+        <div class=" m-auto d-flex mt-3 justify-content-center p-2 rounded-3 border-0 bg-white">
+          <img src="/images/google-icon.png" alt="Facebook logo" height="30px">
+          <p class="m-auto signin">Google</p>
+        </div>
+        </div>
+      </div>
+    </form>
+    </div>
+  </main>
+  
+  <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
+<script src="/js/bootstrap.js"></script>
+</body>
+</html>

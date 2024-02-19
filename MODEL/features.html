@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Product Features</title>
+  <script src="features.js"></script>
+</head>
+
+<body>
+  <h1>Product Features</h1>
+  <div id="productContainer"></div>
+  <script>
+// Function to display products
+function displayProducts(products) {
+const productContainer = document.getElementById("productContainer");
+
+if (products.length === 0) {
+productContainer.innerHTML = "No products available.";
+return;
+}
+
+// Loop through products and create HTML elements
+let html = "";
+products.forEach(product => {
+html += `<div class="product">
+  <h3>${product.name}</h3>
+  <p>Price: $${product.price}</p>
+</div>`;
+});
+
+// Insert the generated HTML into the product container
+productContainer.innerHTML = html;
+}
+
+// Simulated product data
+const products = [
+{ id: 1, name: "Product A", price: 10.99 },
+{ id: 2, name: "Product B", price: 19.99 },
+{ id: 3, name: "Product C", price: 14.99 }
+];
+
+displayProducts(products);
+</script>
+</body>
+
+</html>

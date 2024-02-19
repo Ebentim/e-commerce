@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Seller Dashboard</title>
+  <script src="dashboard.js"></script>
+</head>
+
+<body>
+  <h1>Seller Dashboard</h1>
+  <form id="productForm">
+    <label for="productName">Product Name:</label>
+    <input type="text" id="productName" required>
+    <br>
+    <label for="productPrice">Product Price:</label>
+    <input type="number" id="productPrice" step="0.01" required>
+    <br>
+    <button type="submit">Upload Product</button>
+  </form>
+
+  <script>
+    // Simulated product data
+      let products = [];
+
+      // Function to handle product upload
+      function handleProductUpload(event) {
+        event.preventDefault();
+
+        const productNameInput = document.getElementById("productName");
+        const productPriceInput = document.getElementById("productPrice");
+
+        // Get values from input fields
+        const productName = productNameInput.value;
+        const productPrice = parseFloat(productPriceInput.value);
+
+        // Create product object
+        const product = {
+          id: products.length + 1,
+          name: productName,
+          price: productPrice
+        };
+
+        // Add product to the products array
+        products.push(product);
+
+        // Reset form fields
+        productNameInput.value = "";
+        productPriceInput.value = "";
+
+        // Optional: Display success message or perform additional actions
+
+        console.log("Product uploaded:", product);
+      }
+
+      // Event listener for product upload form submission
+      const productForm = document.getElementById("productForm");
+      productForm.addEventListener("submit", handleProductUpload);
+  </script>
+</body>
+
+</html>
